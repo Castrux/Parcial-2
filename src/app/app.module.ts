@@ -5,6 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PartidoModule } from './partido/partido.module';
 import { EquipoModule } from './equipo/equipo.module';
+import {  HttpClientModule } from '@angular/common/http';
+import { GrupoModule } from './grupo/grupo.module';
+import { HomeTeamModule } from './homeTeam/homeTeam.module';
 
 @NgModule({
   declarations: [
@@ -14,6 +17,10 @@ import { EquipoModule } from './equipo/equipo.module';
     BrowserModule,
     AppRoutingModule,
     PartidoModule,
+    EquipoModule,
+    HttpClientModule,
+    GrupoModule,
+    HomeTeamModule
 
   ],
   providers: [],

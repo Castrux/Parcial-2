@@ -1,10 +1,13 @@
+import { Equipo } from "../equipo/equipo";
+import { HomeTeam } from "../homeTeam/homeTeam";
+
 export class Partido {
   id: string;
   date: string;
-  home: string;
+  home: HomeTeam;
   home_country: string;
   away_country: string;
-  away: string;
+  away:Equipo;
   attendance: number;
   last_change: string;
   last_checked: string;
@@ -16,7 +19,7 @@ export class Partido {
   winner_code: string;
 
 
-  constructor(id: string, date: string, team1: string, team2: string, home_country: string, away_country: string, attendance: number, last_change: string,
+  constructor(id: string, date: string, team1: HomeTeam, team2: Equipo, home_country: string, away_country: string, attendance: number, last_change: string,
     last_checked: string,
     location: string,
     stage_name: string,

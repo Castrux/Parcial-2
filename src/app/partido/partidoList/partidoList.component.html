@@ -1,3 +1,24 @@
-<p>
-  partidoList works!
-</p>
+<h5>Partido</h5>
+<table class="table">
+  <thead class="thead">
+    <tr>
+      <th class="idCol">Id</th>
+      <th class="homeCol">Equipo Local</th>
+      <th class="awayCol">Equipo Visitante</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let partido of partidos">
+      <td class="idRow">
+        <dd>{{partido.id}}</dd>
+      </td>
+      <td class="homeRow">
+        <dd>{{partido.home}}</dd>
+      </td>
+      <td class="awayCol">
+        <dd>{{partido.away_country}}</dd>
+      </td>
+    </tr>
+  </tbody>
+</table>

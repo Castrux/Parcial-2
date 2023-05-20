@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Partido } from '../partido';
+import { PartidoService } from '../partido.service';
 
 @Component({
   selector: 'app-partidoList',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PartidoListComponent implements OnInit {
 
-  constructor() { }
+  partidos: Array<Partido> = [];
 
+  constructor(private partidoService: PartidoService) { }
+
+  getPartidos(): void {
+    this.partidoService.getPartidos().subscribe((partidos => {
+       this.partidos = partidos;
+    }))
+  }
   ngOnInit() {
+    this.getPartidos();
   }
 
 }

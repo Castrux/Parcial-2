@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { EquipoComponent } from './equipo.component';
+import { EquipoListComponent } from './equipoList/equipoList.component';
+import { EquipoDetailComponent } from './equipoDetail/equipoDetail.component';
 
 @NgModule({
   imports: [
     CommonModule
   ],
-  declarations: [EquipoComponent]
+  declarations: [EquipoListComponent, EquipoDetailComponent],
+  exports: [EquipoListComponent, EquipoDetailComponent]
 })
 export class EquipoModule { }

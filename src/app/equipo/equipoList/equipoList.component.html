@@ -1,0 +1,28 @@
+<h5>Equipos</h5>
+
+<table class="table">
+  <thead class="thead-light">
+    <tr>
+      <th>Nombre</th>
+      <th>Goles</th>
+      <th>Goles en contra</th>
+      <th>Puntos</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let equipo of equipos">
+      <td>
+        <dd>{{equipo.name}}</dd>
+      </td>
+      <td>
+        <dd>{{equipo.goals_for}}</dd>
+      </td>
+      <td>
+        <dd>{{equipo.goals_against}}</dd>
+      </td>
+      <td>
+        <dd>{{equipo.points}}</dd>
+      </td>
+    </tr>
+  </tbody>
+</table>
